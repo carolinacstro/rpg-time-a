@@ -1,5 +1,6 @@
 require "./Classes.rb"
 
+# enigma fase1
 def fase1
     #enigma
     txt_enigma = <<~TXT
@@ -19,6 +20,7 @@ def fase1
         if resp == "c" || resp == "C"
             puts "Resposta correta, parabéns"
             #libera joguinho
+            jogo1
         else
             i += 1
             puts "Resposta incorreta, tente novamente"
@@ -28,6 +30,39 @@ def fase1
     
     
     #jogo
+end
+
+#jogo fase 1
+def jogo1
+    jogo1 = <<~TXT
+    \n
+    🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+    🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+    🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+    🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+    🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+    🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🐆🦒🦒🦒🦒🦒
+    🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+    🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+    🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+    \n
+    
+    TXT
+    print "Qual o item diferente? \n"
+    puts jogo1
+    resp = gets.chomp
+
+    i = 0
+    while i < 3
+        if resp = "onça" || resp = "Onça"
+            puts "Resposta correta, parabéns"
+            # libera fase2
+            i = 3
+        else
+            i += 1
+            puts "Resposta incorreta, tente novamente"
+        end
+    end
 end
 
 #introducao do game
