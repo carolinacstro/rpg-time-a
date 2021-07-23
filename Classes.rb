@@ -104,58 +104,126 @@ class Personagem
     end
 
     
-def sorteio_material
-    x = rand(1...10)  
-    if x == 1 then
-        x = "Carvalho"
-    elsif x == 2 then
-        x = "Romeira"
-    elsif x == 3 then
-        x = "Espinheiro Negro"
-    elsif x == 4 then
-        x = "Teixo"
-    elsif x == 5 then
-        x = "Ébano"
-    elsif x == 6 then
-        x = "Videira"
-    elsif x == 7 then
-        x = "Bétula"
-    elsif x == 8 then
-        x = "Mogno"
-    elsif x == 9 then
-        x = "Salgueiro"
-    else 
-        x = "Cerejeira"
+    def sorteio_material
+        x = rand(1...10)  
+        if x == 1 then
+            x = "Carvalho"
+        elsif x == 2 then
+            x = "Romeira"
+        elsif x == 3 then
+            x = "Espinheiro Negro"
+        elsif x == 4 then
+            x = "Teixo"
+        elsif x == 5 then
+            x = "Ébano"
+        elsif x == 6 then
+            x = "Videira"
+        elsif x == 7 then
+            x = "Bétula"
+        elsif x == 8 then
+            x = "Mogno"
+        elsif x == 9 then
+            x = "Salgueiro"
+        else 
+            x = "Cerejeira"
+        end
+
     end
 
+    def sorteio_nucleo
+        y = rand(1...10)
+
+        if y == 1 then
+            y = "Osso"
+        elsif y == 2 then
+            y = "Pena da cauda de Pássaro-Trovão"
+        elsif y == 3 then
+            y = "Pena de fênix"
+        elsif y == 4 then
+            y = "Pelo da cauda de testrálio"
+        elsif y == 5 then
+            y = "Pelo de unicórnio"
+        elsif y == 6 then
+            y = "Serpente Chifruda"
+        elsif y == 7 then
+            y = "Chifre de basilisco"
+        elsif y == 8 then
+            y = "Ditamno"
+        elsif y == 9 then
+            y = "Cabelo de Veela"
+        else 
+            y = "Fibra de coração de dragão"
+        end
+
+    end
 end
 
-def sorteio_nucleo
-    y = rand(1...10)
-    
-    if y == 1 then
-        y = "Osso"
-    elsif y == 2 then
-        y = "Pena da cauda de Pássaro-Trovão"
-    elsif y == 3 then
-        y = "Pena de fênix"
-    elsif y == 4 then
-        y = "Pelo da cauda de testrálio"
-    elsif y == 5 then
-        y = "Pelo de unicórnio"
-    elsif y == 6 then
-        y = "Serpente Chifruda"
-    elsif y == 7 then
-        y = "Chifre de basilisco"
-    elsif y == 8 then
-        y = "Ditamno"
-    elsif y == 9 then
-        y = "Cabelo de Veela"
-    else 
-        y = "Fibra de coração de dragão"
+class Game
+    # enigma fase1
+    def fase1
+        #enigma
+        txt_enigma = <<~TXT
+        \nSe a chave não tens, eu posso te ajudar. 
+        Pegue a varinha bruxo! É só me conjurar... \n
+        Eu sou: \n
+        (a) aquamenti
+        (b) anapneo
+        (c) alohomora
+        TXT
+
+        puts txt_enigma
+        #
+        i = 0
+        while i < 3
+            resp = gets.chomp
+            if resp == "c" || resp == "C"
+                puts "Resposta correta, parabéns"
+                #libera joguinho
+                jogo1
+            else
+                i += 1
+                puts "Resposta incorreta, tente novamente"
+            end
+        end
     end
 
-end
+    #jogo fase 1
+    def jogo1
+        jogo_girafa = <<~TXT
+        \n
+        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🐆🦒🦒🦒🦒🦒
+        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
+        \n
 
+        TXT
+        print "Qual o item diferente? \n"
+        puts jogo_girafa
+        
+        resp = gets.chomp
 
+        if resp == "onça" || resp == "Onça"
+            puts "Resposta correta, parabéns"
+            # libera fase2
+            fase2
+        else
+            puts "Resposta incorreta, tente novamente"
+            puts jogo1
+        end
+
+        #i = 0
+        #while i < 3
+            
+        #end
+    end
+
+    #enigma fase 2
+    def fase2 
+    end
 end
