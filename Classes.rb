@@ -19,8 +19,10 @@ class Personagem
             score = score + 50
         elsif resp1 == "c"  
             score = score + 100
-        else
+        elsif resp1 == "d"
             score = score + 300
+        else
+            score = score + 0
         end
 
         print "\nEscolha um animal:\n(a)leão\n(b)texugo\n(c)cobra\n(d)águia\n"
@@ -32,8 +34,10 @@ class Personagem
             score = score + 50
         elsif resp2 == "c"  
             score = score + 100
-        else
+        elsif resp1 == "d"
             score = score + 300
+        else
+            score = score + 0
         end
 
         print "\nO que é mais importante pra você?\n(a)coragem\n(b)lealdade\n(c)ambição\n(d)inteligência\n"
@@ -45,8 +49,10 @@ class Personagem
             score = score + 50
         elsif resp3 == "c"  
             score = score + 100
+        elsif resp1 == "d"
+            score = score + 300
         else
-            score = score+ 300
+            score = score + 0
         end
 
         print "\nEscolha um fantasma de Hogwarts:\n(a)Nick-Quase-Sem-Cabeça\n(b)Frei Gorducho\n(c)Barão Sangrento\n(d)Dama Cinzenta\n"
@@ -58,8 +64,10 @@ class Personagem
             score = score + 50
         elsif resp4 == "c"  
             score = score + 100
-        else
+        elsif resp1 == "d"
             score = score + 300
+        else
+            score = score + 0
         end
 
         print "\nEscolha uma matéria de Hogwarts:\n(a)Feitiços\n(b)Herbologia\n(c)Poções\n(d)Astronomia\n"
@@ -71,8 +79,10 @@ class Personagem
             score = score + 50
         elsif resp5 == "c"  
             score = score + 100
-        else
+        elsif resp1 == "d"
             score = score + 300
+        else
+            score = score + 0
         end
 
         puts score

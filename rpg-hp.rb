@@ -108,7 +108,7 @@ if op == "1" then
 elsif op == "2" then
     puts "Sair"
 else 
-    puts "opcao invalida"
+    puts "Opção inválida"
 end
 
 
