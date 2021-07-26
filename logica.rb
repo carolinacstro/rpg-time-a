@@ -1,5 +1,7 @@
 require "./ui.rb" 
 
+#aqui nesta funcao ela ira fazer uma validacao par ver se determinado valor 
+#esta dentro do array de chutes com o metodo include que faz isso.
 def pede_um_chute_valido(chutes, erros, mascara)
   chute = cabecalho_de_tentativas(chutes, erros, mascara)
   loop do
@@ -12,6 +14,7 @@ def pede_um_chute_valido(chutes, erros, mascara)
   end
 end
 
+#esta funcao poe uma mascara na palavra, 
 def palavra_mascarada(chutes, palavra_secreta)
   mascara = ""
   for letra in palavra_secreta.chars
@@ -28,13 +31,12 @@ def joga(nome)
   palavra_secreta = sorteio_palavra_secreta
   erros = 0
   chutes = []
-
   while erros < 5
     mascara = palavra_mascarada(chutes, palavra_secreta)
     chute = pede_um_chute_valido(chutes, erros, mascara)
-    chutes << chute
+  
+    chutes << chute #adicionando o chute a ao array chutes
     chutou_uma_unica_letra = chute.size == 1
-
     if chutou_uma_unica_letra 
       total_encontrado = palavra_secreta.count(chute[0])
       if total_encontrado == 0
@@ -55,6 +57,8 @@ def joga(nome)
     end
   end
 end
+
+#aqui é o loop que roda o jogo diversas vezes até o usuario dizer que não quer mais jogar
 def jogo_da_forca
   nome = inicio_jogo
   loop do
