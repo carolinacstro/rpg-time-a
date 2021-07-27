@@ -1,10 +1,15 @@
+require './fase3.rb'
 #enigma fase 2
-class Fase_2
-    def fase3
-        var = "oi"
-        print " "
-    end
+class fase2
     def enigma2 
+        txt_intro = <<~TXT
+        \n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ~~~~~~~~~~~~~~~~~~~ FASE 1 ~~~~~~~~~~~~~~~~~~~
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        TXT
+
         txt_enigma2 = <<~TXT
             \nO tempo esta passando, e o jogo nao acabará. 
             Voce quer que o jogo termine? Venha me pegar!
@@ -55,7 +60,8 @@ class Fase_2
                 resp3 = gets.chomp.downcase
                 if resp3 == "harry potter" || resp3 == "reducto" || resp3 == "rabicho"
                     puts "Resposta correta, parabéns"
-                    fase3
+                    fase3 = Fase3.new
+                    fase3.enigma3
                 else
                     puts "Resposta incorreta, tente novamente"
                     puts caca_palavra
@@ -70,34 +76,5 @@ class Fase_2
         end
 
 
-        #outra alternativa
-        #respostas = ["harry potter", "reducto", "rabicho"]
-        #
-        #i = 1
-        #while i < 3
-        #    print "\n#{i}˚ palavra: "
-        #    resp = gets.chomp
-        #    for resp in respostas do
-        #        if respostas.include? resp
-        #            if respostas << resp
-        #                puts "Você achou a palavra #{resp}"
-        #                i += 1
-        #                print "\n#{i}˚ palavra: "
-        #                resp = gets.chomp
-        #            end
-        #        else
-        #            puts "Resposta incorreta, tente de novo"
-        #        end
-        #    end
-        #end
-
-
-
-
-
-
     end
 end
-
-fase2 = Fase_2.new
-fase2.enigma2
