@@ -1,3 +1,4 @@
+require './fase1.rb'
 class Personagem 
     
     def teste 
@@ -158,72 +159,9 @@ class Personagem
     end
 end
 
+=begin
 class Game
-    # enigma fase1
-    def fase1
-        #enigma
-        txt_enigma = <<~TXT
-        \nSe a chave não tens, eu posso te ajudar. 
-        Pegue a varinha bruxo! É só me conjurar... \n
-        Eu sou: \n
-        (a) aquamenti
-        (b) anapneo
-        (c) alohomora
-        TXT
-
-        puts txt_enigma
-        #
-        i = 0
-        while i < 3
-            resp = gets.chomp
-            if resp == "c" || resp == "C"
-                puts "Resposta correta, parabéns"
-                #libera joguinho
-                jogo1
-            else
-                i += 1
-                puts "Resposta incorreta, tente novamente"
-            end
-        end
-    end
-
-    #jogo fase 1
-    def jogo1
-        jogo_girafa = <<~TXT
-        \n
-        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
-        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
-        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
-        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
-        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
-        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🐆🦒🦒🦒🦒🦒
-        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
-        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
-        🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
-        \n
-
-        TXT
-        print "Qual o item diferente? \n"
-        puts jogo_girafa
-        
-        resp = gets.chomp
-
-        if resp == "onça" || resp == "Onça"
-            puts "Resposta correta, parabéns"
-            # libera fase2
-            fase2
-        else
-            puts "Resposta incorreta, tente novamente"
-            puts jogo1
-        end
-
-        #i = 0
-        #while i < 3
-            
-        #end
-    end
-
-    #enigma fase 2
-    def fase2 
-    end
+    fase1 = Fase1.new
+    fase1.enigma
 end
+=end

@@ -1,6 +1,14 @@
-class Fase_1 
+require './fase2.rb'
+class Fase1 
 
     def enigma
+        txt_intro = <<~TXT
+        \n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ~~~~~~~~~~~~~~~~~~~ FASE 1 ~~~~~~~~~~~~~~~~~~~
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        TXT
         txt_enigma = <<~TXT
         \n Se a chave não tens, eu posso te ajudar. 
         Pegue a varinha bruxo! É só me conjurar... \n
@@ -49,7 +57,8 @@ class Fase_1
         if resp_jogo == "onça" || resp_jogo == "Onça"
             puts "Resposta correta, parabéns"
             # libera fase2
-            #fase2
+            fase2 = Fase2.new
+            fase2.enigma2
         else
             puts "Resposta incorreta, tente novamente"
             puts jogo
@@ -57,7 +66,4 @@ class Fase_1
 
     end 
 end
-
-fase1 = Fase_1.new
-fase1.enigma
 
