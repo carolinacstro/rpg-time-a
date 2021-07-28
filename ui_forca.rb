@@ -14,7 +14,7 @@ def inicio_jogo
   Esta fase é uma forca para voce descobrir deve tentar
   entrar com letras e se descobrir digitar a palavra por extenso!
   \n 
-  MAS  LEMBRESSE VOCE PODE ERRAR APENAS 5 VEZES 
+  MAS  LEMBRESSE VOCE PODE ERRAR APENAS 10 VEZES 
   POREM SE DECIDIR CHUTAR A PALAVRA SEM PROBLEMA 
   POIS CHUTES SÃO ILIMITADOS!
   \n
@@ -41,20 +41,32 @@ end
 
 #Aqui roda ao fim do jogo ou seja quando vc acertar a palavra ou esgotar os erros
 def não_quer_jogar
-  puts "Deseja jogar novamente o jogo da forca (S/N)?"
+  puts "Deseja jogar novamente o jogo da forca(S/N)?"
   sresp = gets.strip
   nresp = sresp.upcase == "N"
 end
 
-#aqui é onde eu coloco a palavra que ira ser usada como base do jogo
-#ele ira usar o size para contar a quantidade de letras nela eu pretendo adicionar a dica tbm
-def sorteio_palavra_secreta
+
+def escolhendo_palavra_secreta
   puts "\nEstamos escolhendo uma palavra"
-  palavra_secreta = "HERMIONE"
-  puts "\nEscolhi uma palavra para voce ... ela tem #{palavra_secreta.size} letras"
+end
+
+def avisa_palavra_escolhida(palavra_secreta)
+  puts "Escolhi uma palavra para voce ela tem #{palavra_secreta.size}"
   puts "\nDica: é um dos personagens da saga! "
   puts "\nBoa sorte"
   palavra_secreta
+end
+
+
+def sorteio_palavra_secreta
+  escolhendo_palavra_secreta
+  texto = File.read("dicionario_forca.txt")
+  todas_os_personagens = texto.split("\n")
+  numero_aleatorio = rand(todas_os_personagens.size)
+  palavra_secreta = todas_os_personagens[numero_aleatorio].upcase
+  avisa_palavra_escolhida(palavra_secreta)
+  
 end
 
 #esta funcao faz uma especie de validacao para ver se vc esta chutando algo repetido

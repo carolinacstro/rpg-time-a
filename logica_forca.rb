@@ -1,5 +1,4 @@
 require "./ui_forca.rb" 
-
 #aqui nesta funcao ela ira fazer uma validacao par ver se determinado valor 
 #esta dentro do array de chutes com o metodo include que faz isso.
 def pede_um_chute_valido(chutes, erros, mascara)
@@ -31,7 +30,7 @@ def joga(nome)
   palavra_secreta = sorteio_palavra_secreta
   erros = 0
   chutes = []
-  while erros < 5
+  while erros < 10
     mascara = palavra_mascarada(chutes, palavra_secreta)
     chute = pede_um_chute_valido(chutes, erros, mascara)
   
