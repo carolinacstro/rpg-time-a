@@ -19,7 +19,7 @@ class Fase3
     \n
     TXT
     puts txt_enigma
-    erro = 0
+    i = 0
     while i < 3
       resp = gets.chomp.upcase
       if resp == "B" && i = 3
