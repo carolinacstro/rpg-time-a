@@ -14,12 +14,12 @@ end
 texto_inicio = <<~TXT
 \n
 --------------------------------------------------
------------------OLA JOVEM BRUXO!-----------------
+-----------------OLÁ JOVEM BRUXO!-----------------
 --------------------------------------------------
 -                                                -
---------SEJA BEM VINDO AO TORNEIO TRIBRUXO--------
+--------SEJA BEM-VINDO AO TORNEIO TRIBRUXO--------
 -                                                -
---Você foi escolhido pelo calice para participar--
+--Você foi escolhido pelo cálice para participar--
 -------------do torneio tribruxo!-----------------
 -                                                -
 - Caso não saiba o que seja isso não se preocupe!- 

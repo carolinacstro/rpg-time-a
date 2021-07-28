@@ -21,12 +21,12 @@ class Fase2
     while i < 3
       resp = gets.chomp.downcase
       if resp == "a" && i = 3
-        puts "Resposta correta, parabéns"
+        puts "\nResposta correta, parabéns\n"
         #libera joguinho
         caca_palavra
       else
         i += 1
-        puts "Resposta incorreta, tente novamente"
+        puts "\nResposta incorreta, tente novamente\n"
       end
     end
   end
@@ -42,6 +42,7 @@ class Fase2
     d j i c u b a t l w e n b v k j h b a w j d h v b l n a w i n d c p j a 
     u i w k j n e s j c n w e o h n f o e h f e i j i f l k l l a a o s k s 
     TXT
+    
     print "\nEncontre as três palavras relacionadas aos livros e filmes da saga Harry Potter :\n"
     puts jogo_palavra
     print "\nA primeira palavra: "
@@ -53,19 +54,19 @@ class Fase2
         print "\nA terceira palavra: "
         resp3 = gets.strip.downcase
           if resp3 == "harry potter" || resp3 == "dobby" || resp3 == "hogwarts"
-            puts "Resposta correta, parabéns"
+            puts "\nResposta correta, parabéns\n"
             fase3 = Fase3.new
             fase3.enigma3
           else
-            puts "Resposta incorreta, tente novamente"
+            puts "\nResposta incorreta, tente novamente\n"
             puts caca_palavra
           end
       else
-        puts "Resposta incorreta, tente novamente"
+        puts "\nResposta incorreta, tente novamente\n"
         puts caca_palavra
         end
     else
-      puts "Resposta incorreta, tente novamente"
+      puts "\nResposta incorreta, tente novamente\n"
       puts caca_palavra
     end
   end

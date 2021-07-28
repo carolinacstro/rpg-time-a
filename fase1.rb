@@ -21,11 +21,11 @@ class Fase1
     resp = gets.chomp
 
     if resp == "c" || resp == "C"
-        puts "Resposta correta, parabéns"
+        puts "\nResposta correta, parabéns\n"
         #libera joguinho
         puts jogo
     else
-        puts "Resposta incorreta, tente novamente"
+        puts "\nResposta incorreta, tente novamente\n"
         puts enigma
     end
   end 
@@ -44,20 +44,18 @@ class Fase1
     🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒🦒
     \n
     TXT
-    print "Qual o item diferente? \n"
+    print "Qual o animal diferente? \n"
     puts jogo_girafa
-    i = 0
-    while i < 3
-      resp = gets.chomp
-      if resp == "ONÇA" or resp == "onça"
-        puts "Resposta correta, parabéns"
+    resp = gets.chomp.upcase
+    case resp
+      when "ONÇA"
+        puts "\nResposta correta, parabéns\n"
         #libera joguinho
         fase2 = Fase2.new
         fase2.enigma2
       else
-        puts "'Resposta incorreta, tente novamente"
-        i +=1
-      end
+        puts "\nResposta incorreta, tente novamente\n"
+        jogo
     end
   end 
 end
