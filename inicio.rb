@@ -2,13 +2,13 @@ require './personagem.rb'
 require './fase1.rb'
 
 def Inicio(x)
-  op = Personagem.new
-  op = op.teste
-  x = Personagem.new
-  y = Personagem.new
-  y = y.sorteio_nucleo
-  x = x.sorteio_material
-  p "Sua varinha é de #{x} e o nucleo é de #{y}"
+    op = Personagem.new
+    op = op.teste
+    x = Personagem.new
+    y = Personagem.new
+    y = y.sorteio_nucleo
+    x = x.sorteio_material
+    p "Sua varinha é de #{x} e o nucleo é de #{y}"
 end
 #introducao do game
 texto_inicio = <<~TXT
@@ -39,13 +39,13 @@ puts "(2) Sair do jogo"
 op = gets.chomp
 
 if op == "1" then
-  Inicio(op)
-  fase1 = Fase1.new
-  fase1.enigma
+    Inicio(op)
+    fase1 = Fase1.new
+    fase1.enigma
 elsif op == "2" then
-  puts "Sair"
+    puts "Sair"
 else 
-  puts "Opção inválida"
+    puts "Opção inválida"
 end
 
 

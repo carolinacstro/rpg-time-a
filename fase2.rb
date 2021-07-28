@@ -17,17 +17,15 @@ class Fase2
     TXT
     puts txt_intro
     puts txt_enigma2
-    i = 0
-    while i < 3
-      resp = gets.chomp.downcase
-      if resp == "a" && i = 3
+    resp = gets.chomp.downcase
+    case resp 
+      when "a"
         puts "Resposta correta, parabéns"
         #libera joguinho
         caca_palavra
       else
-        i += 1
         puts "Resposta incorreta, tente novamente"
-      end
+        enigma2
     end
   end
   def caca_palavra

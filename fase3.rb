@@ -19,17 +19,15 @@ class Fase3
     \n
     TXT
     puts txt_enigma
-    i = 0
-    while i < 3
-      resp = gets.chomp.upcase
-      if resp == "B" && i = 3
+    resp = gets.chomp.upcase
+    case resp 
+      when "B"
         puts "Resposta correta, parabéns"
         #libera joguinho
         jogo_da_forca
       else
-        i += 1
         puts "Resposta incorreta, tente novamente"
-      end
+        enigma3
     end
   end
 end

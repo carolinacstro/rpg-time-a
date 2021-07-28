@@ -46,18 +46,16 @@ class Fase1
     TXT
     print "Qual o item diferente? \n"
     puts jogo_girafa
-    i = 0
-    while i < 3
-      resp = gets.chomp
-      if resp == "ONÇA" or resp == "onça"
+    resp = gets.chomp.upcase
+    case resp
+      when "ONÇA"
         puts "Resposta correta, parabéns"
         #libera joguinho
         fase2 = Fase2.new
         fase2.enigma2
       else
-        puts "'Resposta incorreta, tente novamente"
-        i +=1
-      end
+        puts "Resposta incorreta, tente novamente"
+        jogo
     end
   end 
 end
