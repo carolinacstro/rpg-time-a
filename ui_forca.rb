@@ -48,7 +48,6 @@ end
 
 def escolhendo_palavra_secreta
   puts "\nEstamos escolhendo uma palavra"
-<<<<<<< HEAD
 end
 
 def avisa_palavra_escolhida(palavra_secreta)
