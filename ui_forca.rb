@@ -16,7 +16,6 @@ def inicio_jogo
   \n 
   E LEMBRE-SE, VOCÊ PODE ERRAR APENAS 5 VEZES A PALAVRA,
   MAS OS CHUTES SÃO ILIMITADOS.
-
   \n
   TXT
   puts introducao
