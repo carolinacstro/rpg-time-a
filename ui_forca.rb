@@ -14,7 +14,7 @@ def inicio_jogo
   Esta fase é uma forca, para você descobrir deve entrar com
   as letras e a palavra que você acha que é!
   \n 
-  E LEMBRE-SE, VOCÊ PODE ERRAR APENAS 5 VEZES A PALAVRA,
+  E LEMBRE-SE, VOCÊ PODE ERRAR APENAS 10 VEZES A PALAVRA,
   MAS OS CHUTES SÃO ILIMITADOS.
   \n
   TXT
@@ -51,9 +51,8 @@ def escolhendo_palavra_secreta
 end
 
 def avisa_palavra_escolhida(palavra_secreta)
-  puts "Escolhi uma palavra para voce ela tem #{palavra_secreta.size}"
+  puts "Escolhi uma palavra para voce ela tem #{palavra_secreta.size} letras"
   puts "\nDica: é um dos personagens da saga! "
-  puts "\nBoa sorte"
   palavra_secreta
 end
 
@@ -85,7 +84,12 @@ end
 
 #acerto
 def acertou_palavra
-  puts "\nParabéns, você acertou!"
+  txt_campeao = <<~TXT
+  \nVocê acertou, bom trabalho (;\n
+  \nParabéns você acaba de se tornar campeão do Torneio Tribruxo de 2021!!!!!!!\n
+  TXT
+
+  puts txt_campeao
 end
 
 #erro

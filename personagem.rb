@@ -1,8 +1,8 @@
 require './fase1.rb'
 class Personagem     
   def teste 
-    print "Qual é seu nome? "
-    nome = gets.chomp   
+    print "\nQual é seu nome? "
+    nome = gets.chomp.capitalize   
     puts "\nMuito bem #{nome}! Aperte enter para descobrir sua casa\n\n"
     #teste das casas
     score = 0
@@ -79,13 +79,13 @@ class Personagem
 
     case score 
     when  3..149
-      puts "Sua casa é a Grifinória!\n"
+      puts "\nSua casa é a Grifinória!\n"
     when 150..299
-      puts "Sua casa é a Lufa-lufa!\n"
+      puts "\nSua casa é a Lufa-lufa!\n"
     when 300..899
-      puts "Sua casa é a Sonserina!\n"
+      puts "\nSua casa é a Sonserina!\n"
     when 900..1500
-      puts "Sua casa é a Corvinal!\n"
+      puts "\nSua casa é a Corvinal!\n"
     else   
       print "Digite sua casa de Hogwarts: "
       casa_hogwarts = gets.chomp
