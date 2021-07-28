@@ -41,7 +41,7 @@ end
 
 #Aqui roda ao fim do jogo ou seja quando vc acertar a palavra ou esgotar os erros
 def não_quer_jogar
-  puts "Deseja jogar novamente (S/N)?"
+  puts "Deseja jogar novamente o jogo da forca (S/N)?"
   sresp = gets.strip
   nresp = sresp.upcase == "N"
 end
