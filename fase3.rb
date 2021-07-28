@@ -8,7 +8,7 @@ class Fase3
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     TXT
     txt_enigma = <<~TXT 
-    "Se encontrar um bixo-papao, basta me conjurar
+    "Se encontrar um bixo-papao, basta me conjurar!
     Sua lembrança mais feliz, sempre te ajudará"
     \n
     Quem eu sou?

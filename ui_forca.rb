@@ -3,20 +3,20 @@
 #esta funcao inicia o teceiro jogo!
 #aqui é um pequeno cabecario de boas vindas para o jogador que chegou ate aqui
 def inicio_jogo
-  puts "Bem vindo a terceira e ultima fase do campeonato tribruxo"
+  puts "\nBem-vindo a terceira e última fase do campeonato tribruxo <3"
   puts "\n\n"
   introducao = <<~TXT 
-  Parabens se vc chegou até aqui estamos muito felizes!
-  Pois significa que passou por tres enigmas e dois jogos!
+  Parabéns se você chegou até aqui, estamos muito felizes!
+  Isso significa que passou por três enigmas e dois jogos o:
   \n
-  Nesta ultima fase voce tera que adivinhar uma palavra!!
+  Nesta última fase você terá que adivinhar uma palavra!
   \n
-  Esta fase é uma forca para voce descobrir deve tentar
-  entrar com letras e se descobrir digitar a palavra por extenso!
+  Esta fase é uma forca, para você descobrir deve entrar com
+  as letras e a palavra que você acha que é!
   \n 
-  MAS  LEMBRESSE VOCE PODE ERRAR APENAS 10 VEZES 
-  POREM SE DECIDIR CHUTAR A PALAVRA SEM PROBLEMA 
-  POIS CHUTES SÃO ILIMITADOS!
+  E LEMBRE-SE, VOCÊ PODE ERRAR APENAS 5 VEZES A PALAVRA,
+  MAS OS CHUTES SÃO ILIMITADOS.
+
   \n
   TXT
   puts introducao
@@ -33,9 +33,9 @@ end
 
 #aqui é a função que ira pedir o chute ou a palavra
 def pede_um_chute
-  print "\ncEntre com a letra ou a palavra: "
+  print "\nEntre com a letra ou a palavra: "
   chute = gets.strip.upcase
-  puts "\nSera que voce acertou? Voce chutou #{chute}"
+  puts "\nSerá que voce acertou? Você chutou #{chute}"
   chute
 end
 
@@ -49,10 +49,15 @@ end
 
 def escolhendo_palavra_secreta
   puts "\nEstamos escolhendo uma palavra"
+<<<<<<< HEAD
 end
 
 def avisa_palavra_escolhida(palavra_secreta)
   puts "Escolhi uma palavra para voce ela tem #{palavra_secreta.size}"
+=======
+  palavra_secreta = "HERMIONE"
+  puts "\nEscolhi uma palavra para você ... ela tem #{palavra_secreta.size} letras"
+>>>>>>> main
   puts "\nDica: é um dos personagens da saga! "
   puts "\nBoa sorte"
   palavra_secreta
@@ -71,7 +76,7 @@ end
 
 #esta funcao faz uma especie de validacao para ver se vc esta chutando algo repetido
 def chutes_repetidos(chute)
-  puts "\nVoce ja chutou #{chute}"
+  puts "\nVocê ja chutou #{chute}"
 end
 
 #caso a letra n seja encontrada
@@ -86,11 +91,11 @@ end
 
 #acerto
 def acertou_palavra
-  puts "\nParabens voce acertou"
+  puts "\nParabéns, você acertou!"
 end
 
 #erro
 def errou_palavra
-  puts "\nQue pena voce errou!" 
+  puts "\nQue pena, você errou." 
 end
 
