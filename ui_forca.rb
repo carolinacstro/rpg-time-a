@@ -84,16 +84,36 @@ end
 
 #acerto
 def acertou_palavra
-  txt_campeao = <<~TXT
-  \nVocê acertou, bom trabalho!!! (;\n
-  \nParabéns você acaba de se tornar campeão do Torneio Tribruxo de 2021!!!!!!!\n
-  TXT
-
-  puts txt_campeao
+  puts "Parabens voce acertou"
 end
 
 #erro
 def errou_palavra
-  puts "\nQue pena, você errou." 
+  puts "Que pena, você errou." 
+end
+
+def ganhou
+  ascii = <<~TXT
+  _            _.,----,
+  __  _.-._ / '-.        -  ,._  \) 
+ |  `-)_   '-.   \       / < _ )/" }
+ /__    '-.   \   '-, ___(c-(6)=(6)
+  , `'.    `._ '.  _,'   >\    "  )
+  :;;,,'-._   '---' (  ( "/`. -='/
+ ;:;;:;;,  '..__    ,`-.`)'- '--'
+ ;';:;;;;;'-._ /'._|   Y/   _/' \
+       '''"._ F    |  _/ _.'._   `\
+              L    \   \/     '._  \
+       .-,-,_ |     `.  `'---,  \_ _|
+       //    'L    /  \,   ("--',=`)7
+      | `._       : _,  \  /'`-._L,_'-._
+      '--' '-.\__/ _L   .`'         './/
+                  [ (  /
+                   ) `{
+        snd        \__)
+
+  TXT
+  puts ascii
+  puts "\nVOCE GANHOU O TORNEIO TRIBRUXO"
 end
 

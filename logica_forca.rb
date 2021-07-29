@@ -30,17 +30,17 @@ def joga(nome)
   palavra_secreta = sorteio_palavra_secreta
   erros = 0
   chutes = []
-  while erros <= 10
+  while erros < 11
     mascara = palavra_mascarada(chutes, palavra_secreta)
     chute = pede_um_chute_valido(chutes, erros, mascara)
-  
+
     chutes << chute #adicionando o chute a ao array chutes
     chutou_uma_unica_letra = chute.size == 1
     if chutou_uma_unica_letra 
       total_encontrado = palavra_secreta.count(chute[0])
       if total_encontrado == 0
         letra_n_encontrada
-        erros += 1
+        erros +=1
       else
         letra_encontrada(total_encontrado)
       end
@@ -48,10 +48,11 @@ def joga(nome)
       acertou = chute == palavra_secreta
       if acertou 
         acertou_palavra
+        ganhou
         break
       else
         errou_palavra
-        erros +=1
+        erros = erros + 1
       end
     end
   end
