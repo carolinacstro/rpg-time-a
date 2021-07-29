@@ -1,13 +1,24 @@
 require './fase1.rb'
 class Personagem     
   def teste 
-    print "Qual é seu nome? "
-    nome = gets.chomp   
-    puts "\nMuito bem #{nome}! Aperte enter para descobrir sua casa\n\n"
+    print "\nQual é seu nome? "
+    nome = gets.chomp.capitalize   
+    puts "\nMuito bem #{nome}! Agora faça o teste para descobrir sua casa!\n\n"
     #teste das casas
     score = 0
 
-    print "\nEscolha uma cor:\n(a)vermelho\n(b)amarelo\n(c)verde\n(d)azul\n"
+    txt_perg1 = <<~TXT
+    \n
+    Por qual motivo você ficaria na detenção em Hogwarts?
+
+    (a) Por tentar explorar a Floresta Proibida
+    (b) Por bater em um colega para defender um amigo
+    (c) Por escrever uma mensagem zombando do seu rival numa parede
+    (d) Por invadir a Seção Restrita da biblioteca
+    \n
+    TXT
+
+    puts txt_perg1
     resp1 = gets.chomp
     if resp1 == "a"
       score = score + 1
@@ -21,7 +32,18 @@ class Personagem
       score = score + 0
     end
 
-    print "\nEscolha um animal:\n(a)leão\n(b)texugo\n(c)cobra\n(d)águia\n"
+    txt_perg2 = <<~TXT
+    \n
+    Qual dos adjetivos abaixo mais te ofenderia caso você fosse chamado?
+
+    (a) Covarde
+    (b) Falso
+    (c) Irrelevante
+    (d) Ignorante
+    \n
+    TXT
+
+    puts txt_perg2
     resp2 = gets.chomp
     if resp2 == "a"
       score = score + 1
@@ -35,7 +57,18 @@ class Personagem
       score = score + 0
     end
 
-    print "\nO que é mais importante pra você?\n(a)coragem\n(b)lealdade\n(c)ambição\n(d)inteligência\n"
+    txt_perg3 = <<~TXT
+    \n
+    Que tipo de fama você gostaria de ter?
+
+    (a) Ser extremamente famoso numa época, mas quase ninguém lembrar de você algum tempo depois
+    (b) Não ser famoso, mas ser bom e reconhecido pelos colegas de profissão
+    (c) Ser alguém conhecido no mundo todo
+    (d) Nunca ser famoso em vida, mas ser lembrado eternamente depois da morte
+    \n
+    TXT
+
+    puts txt_perg3
     resp3 = gets.chomp
     if resp3 == "a"
       score = score + 1
@@ -49,7 +82,18 @@ class Personagem
       score = score + 0
     end
 
-    print "\nEscolha um fantasma de Hogwarts:\n(a)Nick-Quase-Sem-Cabeça\n(b)Frei Gorducho\n(c)Barão Sangrento\n(d)Dama Cinzenta\n"
+    txt_perg4 = <<~TXT
+    \n
+    Um trasgo invadiu a escola e entrou em um dos banheiros. Lá estão dois alunos, uma pessoa que você detesta e uma pessoa que você nunca viu na vida. O que você faz?
+
+    (a) Invade o banheiro sozinho e tenta deter o trasgo com as armas que você tem
+    (b) Reúne alguns amigos e tenta deter o trasgo
+    (c) Nada, e torce para que o trasgo ensine uma lição para a pessoa
+    (d) Nada, afinal, você não tem poder suficiente para detê-lo
+    \n
+    TXT
+
+    puts txt_perg4
     resp4 = gets.chomp
     if resp4 == "a"
       score = score + 1
@@ -63,7 +107,18 @@ class Personagem
       score = score + 0
     end
 
-    print "\nEscolha uma matéria de Hogwarts:\n(a)Feitiços\n(b)Herbologia\n(c)Poções\n(d)Astronomia\n"
+    txt_perg5 = <<~TXT
+    \n
+    Escolha uma criatura mágica:
+    
+    (a) Elfos
+    (b) Centauros
+    (c) Acromântulas (aranhas gigantes)
+    (d) Hipogrífos
+    \n
+    TXT
+
+    puts txt_perg5
     resp5 = gets.chomp
     if resp5 == "a"
       score = score + 1
@@ -79,13 +134,13 @@ class Personagem
 
     case score 
     when  3..149
-      puts "Sua casa é a Grifinória!\n"
+      puts "\nSua casa é a Grifinória!\n"
     when 150..299
-      puts "Sua casa é a Lufa-lufa!\n"
+      puts "\nSua casa é a Lufa-lufa!\n"
     when 300..899
-      puts "Sua casa é a Sonserina!\n"
+      puts "\nSua casa é a Sonserina!\n"
     when 900..1500
-      puts "Sua casa é a Corvinal!\n"
+      puts "\nSua casa é a Corvinal!\n"
     else   
       print "Digite sua casa de Hogwarts: "
       casa_hogwarts = gets.chomp

@@ -4,17 +4,17 @@
 #aqui é um pequeno cabecario de boas vindas para o jogador que chegou ate aqui
 def inicio_jogo
   puts "\nBem-vindo a terceira e última fase do campeonato tribruxo <3"
-  puts "\n\n"
   introducao = <<~TXT 
+  \n
   Parabéns se você chegou até aqui, estamos muito felizes!
   Isso significa que passou por três enigmas e dois jogos o:
   \n
-  Nesta última fase você terá que adivinhar uma palavra!
+  Nesta última fase você terá que adivinhar qual é a palavra!
   \n
   Esta fase é uma forca, para você descobrir deve entrar com
   as letras e a palavra que você acha que é!
   \n 
-  E LEMBRE-SE, VOCÊ PODE ERRAR APENAS 5 VEZES A PALAVRA,
+  E LEMBRE-SE, VOCÊ PODE ERRAR APENAS 10 VEZES A PALAVRA,
   MAS OS CHUTES SÃO ILIMITADOS.
   \n
   TXT
@@ -27,7 +27,7 @@ def cabecalho_de_tentativas(chutes, erros, mascara)
   puts "\n\n"
   puts "Palavra secreta #{mascara}"
   puts "Erros até agora #{erros}"
-  puts "Chutes ate agora #{chutes}"
+  puts "Chutes até agora #{chutes}"
 end
 
 #aqui é a função que ira pedir o chute ou a palavra
@@ -40,7 +40,7 @@ end
 
 #Aqui roda ao fim do jogo ou seja quando vc acertar a palavra ou esgotar os erros
 def não_quer_jogar
-  puts "Deseja jogar novamente o jogo da forca(S/N)?"
+  puts "Deseja jogar novamente o jogo da forca (S/N)?"
   sresp = gets.strip
   nresp = sresp.upcase == "N"
 end
@@ -48,13 +48,11 @@ end
 
 def escolhendo_palavra_secreta
   puts "\nEstamos escolhendo uma palavra"
-<<<<<<< HEAD
 end
 
 def avisa_palavra_escolhida(palavra_secreta)
-  puts "Escolhi uma palavra para voce ela tem #{palavra_secreta.size}"
+  puts "Escolhi uma palavra para você, ela tem #{palavra_secreta.size} letras"
   puts "\nDica: é um dos personagens da saga! "
-  puts "\nBoa sorte"
   palavra_secreta
 end
 
@@ -71,7 +69,7 @@ end
 
 #esta funcao faz uma especie de validacao para ver se vc esta chutando algo repetido
 def chutes_repetidos(chute)
-  puts "\nVocê ja chutou #{chute}"
+  puts "\nVocê já chutou #{chute}"
 end
 
 #caso a letra n seja encontrada
@@ -86,7 +84,12 @@ end
 
 #acerto
 def acertou_palavra
-  puts "\nParabéns, você acertou!"
+  txt_campeao = <<~TXT
+  \nVocê acertou, bom trabalho!!! (;\n
+  \nParabéns você acaba de se tornar campeão do Torneio Tribruxo de 2021!!!!!!!\n
+  TXT
+
+  puts txt_campeao
 end
 
 #erro

@@ -30,7 +30,7 @@ def joga(nome)
   palavra_secreta = sorteio_palavra_secreta
   erros = 0
   chutes = []
-  while erros < 10
+  while erros <= 10
     mascara = palavra_mascarada(chutes, palavra_secreta)
     chute = pede_um_chute_valido(chutes, erros, mascara)
   

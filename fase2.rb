@@ -6,12 +6,20 @@ class Fase2
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~ FASE 2 ~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    \n\n
+    Você conseguiu passar da primeira fase do torneio!
+    Agora para você chegar no jogo dessa fase, será necessário
+    entender mais do mundo bruxo. Está preparado?
     TXT
     
     txt_enigma2 = <<~TXT
-    \nO tempo esta passando, e o jogo nao acabará. 
-    Voce quer que o jogo termine? Venha me pegar!
-    Eu Sou: \n
+    \n
+    =================== enigma ===================
+    O tempo esta passando, e o jogo não acabará. 
+    Você quer que o jogo termine? Venha me pegar!
+    ==============================================
+    \n
+    Eu sou:
     (a) pomo de ouro
     (b) colar vira tempo
     (c) petrificus totalus
@@ -31,7 +39,16 @@ class Fase2
         enigma2
     end
   end
+
   def caca_palavra
+    txt_intro_jogo2 = <<~TXT
+    \n\n
+    Muito bem, você conseguiu acertar o enigma da segunda fase!
+    \n
+    Agora, para chegar na última fase será preciso encarar 
+    esse caça-palavra!
+    TXT
+
     jogo_palavra = <<~TXT 
     \ns j c n l k d a l w e c k i n e c k m l c o m a l k s q h b c q h b c k
     b c k j k c q h e i n c o w e n h a r r y p o t t e r s n o i w j m c q 
@@ -44,10 +61,12 @@ class Fase2
     u i w k j n e s j c n w e o h n f o e h f e i j i f l k l l a a o s k s 
     TXT
     
-    print "\nEncontre as três palavras relacionadas aos livros e filmes da saga Harry Potter :\n"
+    puts txt_intro_jogo2
+    print "\nEncontre as três palavras relacionadas aos livros e filmes da saga Harry Potter:\n"
     puts jogo_palavra
     print "\nA primeira palavra: "
     resp1 = gets.strip.downcase
+
     if resp1 == "harry potter" || resp1 == "dobby" || resp1 == "hogwarts"
       print "\nA segunda palavra: "
       resp2 = gets.strip.downcase
@@ -55,7 +74,7 @@ class Fase2
         print "\nA terceira palavra: "
         resp3 = gets.strip.downcase
           if resp3 == "harry potter" || resp3 == "dobby" || resp3 == "hogwarts"
-            puts "\nResposta correta, parabéns\n"
+            puts "\nResposta correta!\n"
             fase3 = Fase3.new
             fase3.enigma3
           else
