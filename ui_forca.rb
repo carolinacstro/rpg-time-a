@@ -1,10 +1,34 @@
-#Este arquivo tem a parte de interacao com o participante do jogo ou ui
+def primeiro_texto
+  texto_inicio = <<~TXT
+  \n
+  ##################################################
+  --------------------------------------------------
+  -----------------OLÁ JOVEM BRUXO!-----------------
+  --------------------------------------------------
+  -                                                -
+  --------SEJA BEM-VINDO AO TORNEIO TRIBRUXO--------
+  -                                                -
+  --Você foi escolhido pelo cálice para participar--
+  -------------do torneio tribruxo!-----------------
+  -                                                -
+  - Caso não saiba o que seja isso não se preocupe!- 
+  ----------explicaremos mais a frente!-------------
+  -                                                -
+  --------------------------------------------------
+  ##################################################S
+  \n
+  TXT
+  puts texto_inicio
+  
+end
 
+#Este arquivo tem a parte de interacao com o participante do jogo ou ui
 #esta funcao inicia o teceiro jogo!
 #aqui é um pequeno cabecario de boas vindas para o jogador que chegou ate aqui
 def inicio_jogo
-  puts "\nBem-vindo a terceira e última fase do campeonato tribruxo <3"
   introducao = <<~TXT 
+  \n
+  Bem-vindo a terceira e última fase do campeonato tribruxo <3
   \n
   Parabéns se você chegou até aqui, estamos muito felizes!
   Isso significa que passou por três enigmas e dois jogos o:
@@ -14,8 +38,7 @@ def inicio_jogo
   Esta fase é uma forca, para você descobrir deve entrar com
   as letras e a palavra que você acha que é!
   \n 
-  E LEMBRE-SE, VOCÊ PODE ERRAR APENAS 10 VEZES A PALAVRA,
-  MAS OS CHUTES SÃO ILIMITADOS.
+  E LEMBRE-SE, VOCÊ PODE ERRAR APENAS 10 VEZES!
   \n
   TXT
   puts introducao
@@ -50,13 +73,14 @@ def escolhendo_palavra_secreta
   puts "\nEstamos escolhendo uma palavra"
 end
 
+#mostra a palavra que foi escolhida
 def avisa_palavra_escolhida(palavra_secreta)
   puts "Escolhi uma palavra para você, ela tem #{palavra_secreta.size} letras"
   puts "\nDica: é um dos personagens da saga! "
   palavra_secreta
 end
 
-
+#aqui esta fazendo o sorteio da palavra no arquivo dicionario
 def sorteio_palavra_secreta
   escolhendo_palavra_secreta
   texto = File.read("dicionario_forca.txt")
@@ -93,27 +117,25 @@ def errou_palavra
 end
 
 def ganhou
-  ascii = <<~TXT
-  _            _.,----,
-  __  _.-._ / '-.        -  ,._  \) 
- |  `-)_   '-.   \       / < _ )/" }
- /__    '-.   \   '-, ___(c-(6)=(6)
-  , `'.    `._ '.  _,'   >\    "  )
-  :;;,,'-._   '---' (  ( "/`. -='/
- ;:;;:;;,  '..__    ,`-.`)'- '--'
- ;';:;;;;;'-._ /'._|   Y/   _/' \
-       '''"._ F    |  _/ _.'._   `\
-              L    \   \/     '._  \
-       .-,-,_ |     `.  `'---,  \_ _|
-       //    'L    /  \,   ("--',=`)7
-      | `._       : _,  \  /'`-._L,_'-._
-      '--' '-.\__/ _L   .`'         './/
-                  [ (  /
-                   ) `{
-        snd        \__)
-
+  desenho = <<~TXT
+  ############################################
+  --------------------------------------------
+  # PARABENS VOCE VENCEU O TORNEIO TRIBRUXO! #
+  --------------------------------------------
+  ############################################
   TXT
-  puts ascii
-  puts "\nVOCE GANHOU O TORNEIO TRIBRUXO"
+  puts desenho
 end
+def perdeu
+  desenho = <<~TXT
+  ############################################
+  --------------------------------------------
+  #      VOCE PERDEU O TORNEIO TRIBRUXO!     #
+  --------------------------------------------
+  ############################################
+  TXT
+  puts desenho
+end
+
+
 

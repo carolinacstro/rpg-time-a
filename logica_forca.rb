@@ -50,6 +50,9 @@ def joga(nome)
         acertou_palavra
         ganhou
         break
+      elsif erros == 10
+        perdeu
+        break
       else
         errou_palavra
         erros = erros + 1
@@ -61,8 +64,5 @@ end
 #aqui é o loop que roda o jogo diversas vezes até o usuario dizer que não quer mais jogar
 def jogo_da_forca
   nome = inicio_jogo
-  loop do
-    joga(nome)
-    break if não_quer_jogar
-  end
+  joga(nome)
 end
