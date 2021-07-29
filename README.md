@@ -1,17 +1,17 @@
-### Torneio Tribruxo <img src="https://static.wikia.nocookie.net/harrypotter/images/c/c3/GoldenSnitch_PM.gif/revision/latest?cb=20161210073839" width="70" height="40" />
+## Torneio Tribruxo <img src="https://static.wikia.nocookie.net/harrypotter/images/c/c3/GoldenSnitch_PM.gif/revision/latest?cb=20161210073839" width="70" height="40" />
 
 - Projeto desenvolvido no estágio, inspirado no Torneio Tribruxo do mundo de Harry Potter ⚡🧙
 
-### Ferramentas
+## Ferramentas
 
 - Ruby
 - VS Code
 
-### Sobre o jogo
+## Sobre o jogo
 
 - O jogo é inspirado em Harry Potter e consiste em três fases, cada uma contendo um enigma e um mini jogo.
 
-### Colaboradores 
+## Colaboradores 
 
 - Carolina Castro
 - Grasiela Eduarda
