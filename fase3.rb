@@ -9,19 +9,18 @@ class Fase3
     \n\n
     Você conseguiu chegar na última fase do
     Torneio Tribruxo!!!
-    \n\n
     Falta apenas uma etapa para você ser o grande 
-    vencedor do torneio! 
-    \n
+    vencedor do torneio!
     Boa sorte (: 
     \n
     TXT
     txt_enigma = <<~TXT 
-    "Se encontrar um bixo-papao, basta me conjurar!
-    Sua lembrança mais feliz, sempre te ajudará"
+    =================== enigma ===================
+    Se encontrar um bixo-papão, basta me conjurar!
+    Sua lembrança mais feliz, sempre te ajudará
+    ==============================================
     \n
     Quem eu sou?
-    \n
     (a) expelliarmus
     (b) expecto patronum
     (c) obliviate

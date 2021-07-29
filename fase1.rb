@@ -7,18 +7,21 @@ class Fase1
     ~~~~~~~~~~~~~~~~~~~ FASE 1 ~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     \n\n
-    O Torneio Tribruxo, é um campeonato entre escolas de magia 
+    O Torneio Tribruxo é um campeonato entre escolas de magia 
     no qual é selecionado um representante com o objetivo de testar 
     as habilidades mágicas, de inteligência e engenho de bruxos e bruxas.
     \n
-    Voce é o campeão escolhido para representar Hogwarts! 
-    O jogo é composto por 3 fases, cada fase contendo um enigma e um mini jogo.
+    Você é o campeão escolhido para representar Hogwarts! 
+    O jogo é composto por três fases, cada fase contendo um enigma e um mini jogo.
     TXT
-
     txt_enigma = <<~TXT
-    \n Se a chave não tens, eu posso te ajudar. 
-    Pegue a varinha bruxo! É só me conjurar... \n
-    Eu sou: \n
+    \n 
+    ================= enigma =================
+    Se a chave não tens, eu posso te ajudar. 
+    Pegue a varinha bruxo! É só me conjurar...
+    ==========================================
+    \n
+    Eu sou:
     (a) aquamenti
     (b) anapneo
     (c) alohomora
@@ -65,8 +68,9 @@ class Fase1
     puts txt_intro_jogo
     print "Qual o animal diferente? \n"
     puts jogo_girafa
-    
+    print "Digite o nome do animal que você encontrou: "
     resp = gets.chomp.upcase
+    
     case resp
       when "ONÇA"
         puts "\nResposta correta, parabéns\n"

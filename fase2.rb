@@ -8,15 +8,18 @@ class Fase2
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     \n\n
     Você conseguiu passar da primeira fase do torneio!
-    \n
-    Agora para você chegar no jogo dessa fase será necessário
-    entender ainda mais o mundo bruxo. Está preparado?
+    Agora para você chegar no jogo dessa fase, será necessário
+    entender mais do mundo bruxo. Está preparado?
     TXT
     
     txt_enigma2 = <<~TXT
-    \nO tempo esta passando, e o jogo nao acabará. 
-    Voce quer que o jogo termine? Venha me pegar!
-    Eu Sou: \n
+    \n
+    =================== enigma ===================
+    O tempo esta passando, e o jogo não acabará. 
+    Você quer que o jogo termine? Venha me pegar!
+    ==============================================
+    \n
+    Eu sou:
     (a) pomo de ouro
     (b) colar vira tempo
     (c) petrificus totalus
@@ -40,10 +43,10 @@ class Fase2
   def caca_palavra
     txt_intro_jogo2 = <<~TXT
     \n\n
-    Muito bem você conseguiu acertar o enigma da segunda fase!
+    Muito bem, você conseguiu acertar o enigma da segunda fase!
     \n
-    Agora para chegar na última fase será preciso encarar 
-    esse caça-palavra de arrepiar!
+    Agora, para chegar na última fase será preciso encarar 
+    esse caça-palavra!
     TXT
 
     jogo_palavra = <<~TXT 
@@ -59,7 +62,7 @@ class Fase2
     TXT
     
     puts txt_intro_jogo2
-    print "\nEncontre as três palavras relacionadas aos livros e filmes da saga Harry Potter :\n"
+    print "\nEncontre as três palavras relacionadas aos livros e filmes da saga Harry Potter:\n"
     puts jogo_palavra
     print "\nA primeira palavra: "
     resp1 = gets.strip.downcase
