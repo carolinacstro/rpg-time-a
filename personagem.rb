@@ -19,6 +19,7 @@ class Personagem
     TXT
 
     puts txt_perg1
+    print"Escreva aqui a alternativa que mais te representa: "
     resp1 = gets.chomp
     if resp1 == "a"
       score = score + 1
@@ -44,6 +45,7 @@ class Personagem
     TXT
 
     puts txt_perg2
+    print"Escreva aqui a alternativa que mais te representa: "
     resp2 = gets.chomp
     if resp2 == "a"
       score = score + 1
@@ -69,6 +71,7 @@ class Personagem
     TXT
 
     puts txt_perg3
+    print"Escreva aqui a alternativa que mais te representa: "
     resp3 = gets.chomp
     if resp3 == "a"
       score = score + 1
@@ -84,7 +87,8 @@ class Personagem
 
     txt_perg4 = <<~TXT
     \n
-    Um trasgo invadiu a escola e entrou em um dos banheiros. Lá estão dois alunos, uma pessoa que você detesta e uma pessoa que você nunca viu na vida. O que você faz?
+    Um trasgo invadiu a escola e entrou em um dos banheiros. Lá estão dois alunos, 
+    uma pessoa que você detesta e uma pessoa que você nunca viu na vida. O que você faz?
 
     (a) Invade o banheiro sozinho e tenta deter o trasgo com as armas que você tem
     (b) Reúne alguns amigos e tenta deter o trasgo
@@ -94,6 +98,7 @@ class Personagem
     TXT
 
     puts txt_perg4
+    print"Escreva aqui a alternativa que mais te representa: "
     resp4 = gets.chomp
     if resp4 == "a"
       score = score + 1
@@ -119,6 +124,7 @@ class Personagem
     TXT
 
     puts txt_perg5
+    print"Escreva aqui a alternativa que mais te representa: "
     resp5 = gets.chomp
     if resp5 == "a"
       score = score + 1

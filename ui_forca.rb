@@ -28,7 +28,7 @@ end
 def inicio_jogo
   introducao = <<~TXT 
   \n
-  Bem-vindo a terceira e última fase do campeonato tribruxo <3
+  Bem-vindo ao terceiro e último jogo do campeonato tribruxo <3
   \n
   Parabéns se você chegou até aqui, estamos muito felizes!
   Isso significa que passou por três enigmas e dois jogos o:
@@ -63,7 +63,7 @@ end
 
 #Aqui roda ao fim do jogo ou seja quando vc acertar a palavra ou esgotar os erros
 def não_quer_jogar
-  puts "Deseja jogar novamente o jogo da forca (S/N)?"
+  puts "Deseja jogar o Torneio Tribruxo novamente (S/N)?"
   sresp = gets.strip
   nresp = sresp.upcase == "N"
 end
@@ -108,29 +108,30 @@ end
 
 #acerto
 def acertou_palavra
-  puts "Parabens voce acertou"
+  puts "\nParabéns você acertou"
 end
 
 #erro
 def errou_palavra
-  puts "Que pena, você errou." 
+  puts "\nQue pena, você errou." 
 end
 
 def ganhou
   desenho = <<~TXT
-  ############################################
+  \n############################################
   --------------------------------------------
-  # PARABENS VOCE VENCEU O TORNEIO TRIBRUXO! #
+  # PARABÉNS VOCE VENCEU O TORNEIO TRIBRUXO! #
   --------------------------------------------
   ############################################
   TXT
   puts desenho
 end
+
 def perdeu
   desenho = <<~TXT
-  ############################################
+  \n############################################
   --------------------------------------------
-  #      VOCE PERDEU O TORNEIO TRIBRUXO!     #
+  #      VOCÊ PERDEU O TORNEIO TRIBRUXO ):     #
   --------------------------------------------
   ############################################
   TXT
