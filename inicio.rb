@@ -15,8 +15,8 @@ end
 def comecar
   primeiro_texto
   loop do
-    puts "(1) Iniciar jogo"
-    puts "(2) Sair do jogo"
+    puts "\n(1) Iniciar jogo"
+    puts "(2) Sair do jogo\n"
     op = gets.chomp
     if op == "1" then
         Inicio(op)

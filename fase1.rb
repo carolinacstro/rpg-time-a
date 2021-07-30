@@ -12,7 +12,8 @@ class Fase1
     as habilidades mágicas, de inteligência e engenho de bruxos e bruxas.
     \n
     Você é o campeão escolhido para representar Hogwarts! 
-    O jogo é composto por três fases, cada fase contendo um enigma e um mini jogo.
+    O jogo é composto por três fases, cada fase contendo um enigma 
+    e um mini jogo.
     TXT
     txt_enigma = <<~TXT
     \n 
@@ -25,10 +26,12 @@ class Fase1
     (a) aquamenti
     (b) anapneo
     (c) alohomora
+    \n
     TXT
 
     puts txt_intro 
     puts txt_enigma
+    print"Escreva aqui a alternativa correta: "
     resp = gets.chomp
 
     if resp == "c" || resp == "C"

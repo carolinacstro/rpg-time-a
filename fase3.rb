@@ -20,7 +20,7 @@ class Fase3
     Sua lembrança mais feliz, sempre te ajudará
     ==============================================
     \n
-    Quem eu sou?
+    Eu sou:
     (a) expelliarmus
     (b) expecto patronum
     (c) obliviate
@@ -29,15 +29,16 @@ class Fase3
 
     puts txt_intro3
     puts txt_enigma
+    print"Escreva aqui a alternativa correta: "
     resp = gets.chomp.upcase
 
     case resp 
       when "B"
-        puts "Resposta correta!"
+        puts "\nResposta correta!"
         #libera joguinho
         jogo_da_forca
       else
-        puts "Resposta incorreta, tente novamente"
+        puts "\nResposta incorreta, tente novamente"
         enigma3
     end
   end

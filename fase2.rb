@@ -23,19 +23,21 @@ class Fase2
     (a) pomo de ouro
     (b) colar vira tempo
     (c) petrificus totalus
+    \n
     TXT
 
     puts txt_intro
     puts txt_enigma2
+    print"Escreva aqui a alternativa correta: "
     resp = gets.chomp.downcase
 
     case resp 
       when "a"
-        puts "Resposta correta, parabéns"
+        puts "\nResposta correta, parabéns"
         #libera joguinho
         caca_palavra
       else
-        puts "Resposta incorreta, tente novamente"
+        puts "\nResposta incorreta, tente novamente"
         enigma2
     end
   end
