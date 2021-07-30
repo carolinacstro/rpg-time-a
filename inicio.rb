@@ -1,6 +1,6 @@
 require './personagem.rb'
 require './fase1.rb'
-require './ui_forca.rb'
+require './ui.rb'
 
 def Inicio(x)
     op = Personagem.new

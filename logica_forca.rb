@@ -1,4 +1,4 @@
-require "./ui_forca.rb" 
+require "./ui.rb" 
 #aqui nesta funcao ela ira fazer uma validacao par ver se determinado valor 
 #esta dentro do array de chutes com o metodo include que faz isso.
 def pede_um_chute_valido(chutes, erros, mascara)
